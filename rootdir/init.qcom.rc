@@ -265,9 +265,10 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
 
 service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
     override
+    interface android.hardware.sensors@1.0::ISensors default
     class hal
     user system
-    group system input wakelock
+    group system input wakelock uhid
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
