@@ -132,6 +132,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096
 
+# Storage.xml moment
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.binary_xml=false
+
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
