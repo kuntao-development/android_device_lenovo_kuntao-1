@@ -138,6 +138,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.binary_xml=false
 
+# Bpf
+PRODUCT_PRODUCT_PROPERTIES += \
+    bpf.progs_loaded=1
+
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
