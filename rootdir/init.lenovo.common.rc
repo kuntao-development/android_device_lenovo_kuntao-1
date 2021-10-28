@@ -6,7 +6,6 @@ service vfmservice /vendor/bin/vfmService
     user system
     group system input uhid
     class main
-    disabled
 
 on property:vendor.sys.listeners.registered=true
     start vfmservice
