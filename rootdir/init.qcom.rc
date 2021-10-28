@@ -44,7 +44,7 @@ on early-boot
 
     write /sys/kernel/boot_adsp/boot 1
 
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    exec -- /vendor/bin/init.qcom.early_boot.sh
 
     chown system graphics /sys/class/graphics/fb0/idle_time
     chown system graphics /sys/class/graphics/fb0/dyn_pu
@@ -243,7 +243,6 @@ service charger /system/bin/charger
     user system
     group system graphics input
     capabilities SYS_BOOT
-    seclabel u:r:charger:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
