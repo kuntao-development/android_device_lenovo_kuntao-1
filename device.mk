@@ -77,6 +77,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
+# Bpfloader
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/bpfloader.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/bpfloader.rc
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8953 \
@@ -328,6 +332,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
+    init.logcat.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     fstab.qcom \
