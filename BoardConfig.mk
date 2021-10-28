@@ -166,9 +166,8 @@ VENDOR_SECURITY_PATCH := 2017-11-01
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Treble
+# Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
