@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_kuntao.mk
+    $(LOCAL_DIR)/octavi_kuntao.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_kuntao-user \
-    aosp_kuntao-userdebug \
-    aosp_kuntao-eng
+    octavi_kuntao-user \
+    octavi_kuntao-userdebug \
+    octavi_kuntao-eng
