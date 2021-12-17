@@ -150,8 +150,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.binary_xml=false
 
 # Bpf
-PRODUCT_PRODUCT_PROPERTIES += \
-    bpf.progs_loaded=1
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
