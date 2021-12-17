@@ -149,6 +149,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.binary_xml=false
 
+# Vndk
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vndk.version=current
+
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=false
