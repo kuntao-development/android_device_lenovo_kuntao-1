@@ -77,8 +77,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8953 \
-    Camera2
+    camera.msm8953
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4:64 \
