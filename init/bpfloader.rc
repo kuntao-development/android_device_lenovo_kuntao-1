@@ -56,6 +56,3 @@ service bpfloader /system/bin/bpfloader
     oneshot
     # we're not really updatable, but want to be able to load bpf programs shipped in apexes
     updatable
-
-on property:ro.kernel.ebpf.supported=false
-    stop bpfloader
