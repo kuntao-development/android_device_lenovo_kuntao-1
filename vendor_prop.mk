@@ -112,15 +112,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
-# LMKD
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.downgrade_pressure=60 \
-    ro.lmk.kill_heaviest_task=false \
-    ro.lmk.log_stats=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.use_psi=false
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
@@ -142,16 +133,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=1 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096
 
 # Storage.xml moment
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.binary_xml=false
-
-# Vndk
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vndk.version=current
 
 # Bpf
 PRODUCT_PROPERTY_OVERRIDES += \
