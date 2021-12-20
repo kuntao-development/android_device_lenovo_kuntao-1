@@ -62,7 +62,7 @@ install_in_hw_dir :=
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := vndk-sp
-LOCAL_MODULE_OWNER := google
+LOCAL_MODULE_OWNER := lenovo
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := $(addsuffix .vndk-sp-gen,$(VNDK_SP_LIBRARIES))
 include $(BUILD_PHONY_PACKAGE)
