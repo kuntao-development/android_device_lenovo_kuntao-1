@@ -36,6 +36,11 @@ on early-init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
+on late-fs
+# Only enable the bootreceiver tracing instance for kernels 5.10 and above.
+on late-fs && property:ro.kernel.version=3.18
+    setprop bootreceiver.enable 0
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
