@@ -65,6 +65,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
     debug.sf.enable_hwc_vds=1 \
+    ro.hardware.vulkan=8953 \
+    ro.hardware.egl=adreno \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
     vendor.display.disable_skip_validate=1 \
@@ -73,7 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=1
+    drm.service.enabled=true
 
 # Factory reset protection
 PRODUCT_PROPERTY_OVERRIDES += \
