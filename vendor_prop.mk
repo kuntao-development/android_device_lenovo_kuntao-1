@@ -145,6 +145,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=false
 
+# Blur on app-launch
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.launcher.blur.appLaunch=0
+
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm
