@@ -119,6 +119,8 @@ on charger
     setprop sys.usb.configfs 0
     start qcom-post-boot
     start vendor.power_off_alarm
+    chown system system /sys/class/leds/rgb/brightness
+    write /sys/class/leds/rgb/brightness 255
 
 service adsprpcd /vendor/bin/adsprpcd
     class main
