@@ -242,6 +242,13 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
 
+# Set vendor-ril lib path based on Meta version
+on property:vendor.rild.libpath=*
+    setprop rild.libpath ${vendor.rild.libpath}
+
+on property:ro.vendor.radio.noril=*
+    setprop ro.radio.noril ${ro.vendor.radio.noril}
+
 on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
@@ -264,3 +271,6 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     group system input wakelock uhid
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
+
+on property:dev.bootcomplete=1
+    restart ril-daemon
