@@ -151,6 +151,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 TARGET_USES_INTERACTION_BOOST := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
