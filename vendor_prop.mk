@@ -149,6 +149,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.launcher.blur.appLaunch=0
 
+# Gboard configuration
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.kb_pad_port_b=1
+
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm
