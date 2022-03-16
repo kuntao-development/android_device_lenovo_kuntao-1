@@ -362,9 +362,6 @@
     <bool name="config_pocketModeSupported">false</bool>
     <bool name="config_pocketUseLightSensor">false</bool>
 
-    <!-- Whether to cancel fingerprint operation if not idle -->
-    <bool name="config_fpCancelIfNotIdle">true</bool>
-
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
 
