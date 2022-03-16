@@ -41,7 +41,7 @@ USE_PIXEL_CHARGER := true
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.octavi.maintainer=Rip12
+    ro.octavi.maintainer=XiaoAkay
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
