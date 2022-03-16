@@ -362,6 +362,9 @@
     <bool name="config_pocketModeSupported">false</bool>
     <bool name="config_pocketUseLightSensor">false</bool>
 
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">false</bool>
+
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
 
