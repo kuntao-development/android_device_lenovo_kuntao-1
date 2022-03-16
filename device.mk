@@ -386,6 +386,8 @@ PRODUCT_PACKAGES += \
     wcnss_service
 
 PRODUCT_PACKAGES += \
+    libcld80211 \
+    libwifi-hal-qcom \
     hostapd \
     WifiOverlay \
     wpa_supplicant \
