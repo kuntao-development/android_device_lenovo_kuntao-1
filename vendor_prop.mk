@@ -147,8 +147,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=false
 
 # Blur on app-launch
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.launcher.blur.appLaunch=0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=false
 
 # Gboard configuration
 PRODUCT_PRODUCT_PROPERTIES += \
