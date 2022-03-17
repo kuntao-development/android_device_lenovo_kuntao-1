@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME             "Lenovo P2"
+#define BTM_DEF_LOCAL_NAME             "Lenovo P2a42"
 
 #define BLE_VND_INCLUDED               TRUE
 #define BTM_SCO_ENHANCED_SYNC_ENABLED  FALSE
