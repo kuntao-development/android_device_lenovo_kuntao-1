@@ -280,4 +280,4 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     rlimit rtprio 10 10
 
 on property:dev.bootcomplete=1
-    restart ril-daemon
+    restart vendor.ril-daemon
