@@ -11,7 +11,8 @@ on property:vendor.sys.listeners.registered=true
     start vfmservice
 
 on property:vold.decrypt=trigger_restart_framework
-    start vfmservice
+    restart vfmservice
+    restart vendor.fps_hal
 
 on boot
     # CABC feature
