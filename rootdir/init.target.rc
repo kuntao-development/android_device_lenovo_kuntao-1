@@ -64,6 +64,9 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
+on property:init.svc.qcamerasvr=running
+    restart cameraserver
+
 service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
