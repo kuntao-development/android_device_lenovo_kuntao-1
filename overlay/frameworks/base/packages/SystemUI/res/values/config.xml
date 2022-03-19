@@ -31,6 +31,10 @@
     <!-- The CPUs to display in CPUInfoService view -->
     <string name="config_displayCpus" translatable="false">0,1,2,3</string>
 
+    <!-- The battery current divider, some kernel report current value in mA other in µA.
+         Leave 1 if you have mA, put 1000 if you have µA -->
+    <integer name="config_battCurrentDivider" translatable="false">1</integer>
+
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">30</integer>
 </resources>
