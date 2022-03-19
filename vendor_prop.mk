@@ -56,7 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.smart_charger=W
 
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.charger.enable_suspend=true
 
 # CNE
@@ -154,7 +154,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.launcher.blur.appLaunch=false
 
 # Gboard configuration
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_b=1
 
 # SoC
