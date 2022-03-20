@@ -35,6 +35,10 @@ on early-init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
+on init
+    # Disable bpf support
+    setprop ro.kernel.ebpf.supported false
+
 on late-fs
 # Only enable the bootreceiver tracing instance for kernels 5.10 and above.
 on late-fs && property:ro.kernel.version=3.18
