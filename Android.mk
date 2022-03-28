@@ -92,4 +92,13 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS)
 
+WCNSS_DAT_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+$(WCNSS_DAT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	      @echo "WCNSS dat link: $@"
+	      @mkdir -p $(dir $@)
+	      @rm -rf $@
+	      $(hide) ln -sf /mnt/vendor/persist/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_DAT_SYMLINK)
+
 endif

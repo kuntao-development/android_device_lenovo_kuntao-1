@@ -56,9 +56,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.smart_charger=W
 
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.charger.enable_suspend=true
-
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
@@ -75,6 +72,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=16m \
+    dalvik.vm.heapgrowthlimit=192m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=2m \
+    dalvik.vm.heapmaxfree=8m
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -88,7 +94,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.synaFpHal=W \
     log.tag.SynapticsLIB=W \
     log.tag.synaTransport=W \
-    persist.vendor.fp.gesture=0 \
+    persist.vendor.fp.gesture=1 \
     persist.sys.fp.fingerUpCheck=0 \
     persist.sys.fp.tplUpdYieldTime=400
 
@@ -100,6 +106,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
+
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.use_psi=false \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.use_minfree_levels=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -140,22 +159,18 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096
 
-# Storage.xml moment
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.binary_xml=false
-
-# Blur on app-launch
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=false
-
-# Gboard configuration
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.com.google.ime.kb_pad_port_b=1
-
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm
     ro.soc.model=MSM8953
+
+# Storage.xml moment
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.binary_xml=false
+
+# Vndk version a12
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vndk.version=31
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
