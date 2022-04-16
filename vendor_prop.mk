@@ -60,6 +60,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
 
+# Cast
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.wfd.max_resolution=7
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
