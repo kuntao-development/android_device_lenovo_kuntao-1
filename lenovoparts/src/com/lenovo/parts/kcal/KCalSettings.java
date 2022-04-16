@@ -33,6 +33,7 @@ public class KCalSettings extends PreferenceFragment implements
         final ActionBar actionBar = getActivity().getActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
