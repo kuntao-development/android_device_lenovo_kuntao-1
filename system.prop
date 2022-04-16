@@ -2,11 +2,6 @@
 # system.prop for kuntao
 #
 
-# Maintainer | Phone info
-ro.octavi.maintainer=XiaoAkay
-ro.octavi.hw.cam=13MP:5MP
-ro.octavi.hw.cpu=Snapdragon 625
-
 # Charger
 ro.charger.enable_suspend=true
 
