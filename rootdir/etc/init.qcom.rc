@@ -288,4 +288,5 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 on property:dev.bootcomplete=1
+    setprop persist.sys.io.scheduler "bfq"
     restart vendor.ril-daemon
