@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/octavi_kuntao.mk
+    $(LOCAL_DIR)/lineage_kuntao.mk
 
 COMMON_LUNCH_CHOICES := \
-    octavi_kuntao-user \
-    octavi_kuntao-userdebug \
-    octavi_kuntao-eng
+    lineage_kuntao-user \
+    lineage_kuntao-userdebug \
+    lineage_kuntao-eng
