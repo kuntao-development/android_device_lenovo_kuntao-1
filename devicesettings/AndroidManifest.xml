@@ -28,6 +28,7 @@
         android:minSdkVersion="30" />
 
     <application
+        android:icon="@drawable/ic_gestures"
         android:label="@string/lenovo_gestures_title"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
