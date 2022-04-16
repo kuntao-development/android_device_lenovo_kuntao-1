@@ -168,9 +168,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.binary_xml=false
 
-# Vndk version a12
+# Vndk version 12L
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vndk.version=31
+    ro.vndk.version=32
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
