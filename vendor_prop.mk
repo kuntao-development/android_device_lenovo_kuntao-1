@@ -151,7 +151,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     ro.telephony.default_network=9,1 \
     ro.telephony.call_ring.multiple=false \
-    persist.sys.fflag.override.settings_provider_model=false \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
