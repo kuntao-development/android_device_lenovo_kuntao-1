@@ -161,7 +161,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.manufacturer=Qualcomm
+    ro.soc.manufacturer=Qualcomm \
     ro.soc.model=MSM8953
 
 # Storage.xml moment
