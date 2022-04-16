@@ -25,8 +25,8 @@
     <integer name="config_maxVisibleNotificationIcons">6</integer>
     <integer name="config_maxVisibleNotificationIconsWhenLock">7</integer>
 
-    <!-- StatusBar burn-in protection -->
-    <bool name="config_statusBarBurnInProtection">false</bool>
+    <!-- The CPU temperature divider, if needed -->
+    <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 
     <!-- The CPUs to display in CPUInfoService view -->
     <string name="config_displayCpus" translatable="false">0,1,2,3</string>
