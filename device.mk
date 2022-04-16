@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# HW crypto
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -196,7 +200,8 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1-service
+    android.hardware.keymaster@3.0-impl:64 \
+    android.hardware.keymaster@3.0-service
 
 # Lenovo stuff
 PRODUCT_PACKAGES += \
