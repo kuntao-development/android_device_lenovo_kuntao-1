@@ -6,6 +6,9 @@
 
 android_app {
     name: "LenovoGestures",
+    defaults: [
+        "SettingsLibDefaults",
+    ],
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
