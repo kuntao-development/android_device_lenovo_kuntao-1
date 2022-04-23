@@ -70,6 +70,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.latch_unsignaled=1 \
     ro.hardware.egl=adreno \
+    ro.hardware.vulkan=msm8953 \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
     vendor.display.disable_skip_validate=1 \
