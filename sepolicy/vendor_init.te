@@ -1,4 +1,0 @@
-allow vendor_init {
-    system_data_file
-    vfsspi_data_file
-}:dir create_dir_perms;

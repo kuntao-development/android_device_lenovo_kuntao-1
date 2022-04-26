@@ -1,2 +1,0 @@
-allow hal_camera_default hal_power_hwservice:hwservice_manager find;
-allow hal_camera_default hal_power_default:binder call;

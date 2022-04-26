@@ -1,5 +1,0 @@
-# Magisk
-get_prop(untrusted_app, virtual_ab_prop);
-
-# MemTrack
-dontaudit untrusted_app hal_memtrack_hwservice:hwservice_manager { find };
