@@ -69,6 +69,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.latch_unsignaled=1 \
+    debug.renderengine.backend=threaded \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=msm8953 \
     ro.opengles.version=196610 \
