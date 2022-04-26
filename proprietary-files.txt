@@ -636,14 +636,12 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|ab552724f7d723a7
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
 
 # Sensors
-vendor/lib/hw/activity_recognition.msm8953.so
 vendor/lib/lib_acgdaemon.so
 vendor/lib/libmag_akm.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/sensors.alsps.so
 vendor/lib/sensors.st.so
-vendor/lib64/hw/activity_recognition.msm8953.so
 vendor/lib64/lib_acgdaemon.so
 vendor/lib64/libmag_akm.so
 vendor/lib64/libsensor1.so
