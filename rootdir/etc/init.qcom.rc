@@ -32,17 +32,8 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
-on init
-    # Disable bpf support
-    setprop ro.kernel.ebpf.supported false
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
-
-on late-fs
-# Only enable the bootreceiver tracing instance for kernels 5.10 and above.
-on late-fs && property:ro.kernel.version=3.18
-    setprop bootreceiver.enable 0
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -52,7 +43,7 @@ on early-boot
 
     write /sys/kernel/boot_adsp/boot 1
 
-    exec -- /vendor/bin/init.qcom.early_boot.sh
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
     chown system graphics /sys/class/graphics/fb0/idle_time
     chown system graphics /sys/class/graphics/fb0/dyn_pu
@@ -276,18 +267,12 @@ service charger /system/bin/charger
     file /sys/fs/pstore/console-ramoops-0 r
     file /sys/fs/pstore/console-ramoops r
     file /proc/last_kmsg r
+    seclabel u:r:charger:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
-
-# Set vendor-ril lib path based on Meta version
-on property:vendor.rild.libpath=*
-    setprop rild.libpath ${vendor.rild.libpath}
-
-on property:ro.vendor.radio.noril=*
-    setprop ro.radio.noril ${ro.vendor.radio.noril}
 
 on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
