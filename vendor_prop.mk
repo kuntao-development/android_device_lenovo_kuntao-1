@@ -183,6 +183,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
 
+# Watchdog
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hw_timeout_multiplier=3
+
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
