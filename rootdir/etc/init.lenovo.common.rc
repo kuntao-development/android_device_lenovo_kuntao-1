@@ -6,6 +6,7 @@ service vfmservice /vendor/bin/vfmService
     class main
     user system
     group system input uhid
+    writepid /dev/cpuset/system-background/tasks
 
 on property:vendor.sys.listeners.registered=true
     start vfmservice
