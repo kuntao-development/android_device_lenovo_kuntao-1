@@ -1,0 +1,19 @@
+# Lenovo parts
+allow qti_init_shell sysfs_kcal:dir search;
+allow qti_init_shell sysfs_kcal:file rw_file_perms;
+allow qti_init_shell sysfs_vibrator:dir search;
+allow qti_init_shell sysfs_vibrator:file rw_file_perms;
+allow qti_init_shell sysfs_torch:dir search;
+allow qti_init_shell sysfs_torch:file rw_file_perms;
+allow qti_init_shell sysfs_touchpanel:dir search;
+allow qti_init_shell sysfs_touchpanel:file rw_file_perms;
+allow qti_init_shell sysfs_headphonegain:file rw_file_perms;
+allow qti_init_shell sysfs_micgain:file rw_file_perms;
+allow qti_init_shell sysfs_speakergain:file rw_file_perms;
+
+# Postboot
+allow qti_init_shell sysfs:file { write setattr };
+
+allow qti_init_shell system_data_file:file getattr;
+
+dontaudit qti_init_shell vendor_file:dir read;

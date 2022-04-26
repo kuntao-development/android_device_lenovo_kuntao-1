@@ -1,0 +1,4 @@
+# Alarm
+allow poweroffalarm_app cgroup:file rw_file_perms;
+
+allow poweroffalarm_app hal_alarm_qti_hwservice:hwservice_manager find;
