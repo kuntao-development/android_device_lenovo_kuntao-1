@@ -1,6 +1,9 @@
 # Magisk
 get_prop(untrusted_app, virtual_ab_prop);
 
+# Oem unlock 
+dontaudit untrusted_app oem_unlock_prop:file read;
+
 # Window
 dontaudit untrusted_app window_service:service_manager { find };
 
