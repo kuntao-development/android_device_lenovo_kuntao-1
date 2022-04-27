@@ -1,6 +1,15 @@
 # Magisk
 get_prop(untrusted_app, virtual_ab_prop);
 
+# Qemu sf lcd density
+dontaudit untrusted_app qemu_sf_lcd_density_prop:file read;
+
+# Serialno 
+dontaudit untrusted_app serialno_prop:file read;
+
+# Qemu hw 
+dontaudit untrusted_app qemu_hw_prop:file read;
+
 # Oem unlock 
 dontaudit untrusted_app oem_unlock_prop:file read;
 
