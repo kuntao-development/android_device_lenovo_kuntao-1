@@ -1,17 +1,20 @@
 # Magisk
 get_prop(untrusted_app, virtual_ab_prop);
 
-# Qemu sf lcd density
-dontaudit untrusted_app qemu_sf_lcd_density_prop:file read;
-
-# Serialno 
-dontaudit untrusted_app serialno_prop:file read;
-
-# Qemu hw 
-dontaudit untrusted_app qemu_hw_prop:file read;
-
-# Oem unlock 
-dontaudit untrusted_app oem_unlock_prop:file read;
+# Silence some proc related logspam
+dontaudit untrusted_app {
+    proc
+    proc_net
+    proc_net_tcp_udp
+    proc_stat
+    proc_tty_drivers
+    proc_version
+    proc_zoneinfo
+    serialno_prop
+    oem_unlock_prop
+    qemu_hw_prop
+    qemu_sf_lcd_density_prop
+}:file { read open getattr };
 
 # Window
 dontaudit untrusted_app window_service:service_manager { find };
