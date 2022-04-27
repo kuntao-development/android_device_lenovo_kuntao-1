@@ -1,6 +1,9 @@
 # Magisk
 get_prop(untrusted_app, virtual_ab_prop);
 
+# Silence dalvikcache logspam
+dontaudit untrusted_app dalvikcache_data_file:file execmod;
+
 # Silence some proc related logspam
 dontaudit untrusted_app {
     proc
@@ -10,6 +13,7 @@ dontaudit untrusted_app {
     proc_tty_drivers
     proc_version
     proc_zoneinfo
+    proc_loadavg
     serialno_prop
     oem_unlock_prop
     qemu_hw_prop
