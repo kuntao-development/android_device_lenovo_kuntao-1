@@ -1,0 +1,4 @@
+# Silence mt manager logspam
+dontaudit untrusted_app_27 {
+    proc_pid_max
+}:file { read open getattr };
