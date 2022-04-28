@@ -128,6 +128,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CONFIG := lineageos_kuntao_defconfig
 TARGET_KERNEL_SOURCE := kernel/lenovo/msm8953
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
