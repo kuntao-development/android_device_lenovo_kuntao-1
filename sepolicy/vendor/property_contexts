@@ -40,7 +40,6 @@ persist.imglib.cf.          u:object_r:camera_prop:s0
 # Wi-Fi
 persist.sys.dynamic.nv          u:object_r:vendor_wifi_prop:s0
 vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
-wifi.active.interface           u:object_r:vendor_wifi_prop:s0
 
 # Smart charger
 persist.radio.callstate      u:object_r:vendor_radio_prop:s0
