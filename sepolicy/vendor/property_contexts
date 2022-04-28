@@ -36,6 +36,7 @@ ro.camera.res.fmq.size          u:object_r:camera_prop:s0
 persist.dual.gain_tune          u:object_r:camera_prop:s0
 persist.dual.line_tune          u:object_r:camera_prop:s0
 persist.imglib.cf.          u:object_r:camera_prop:s0
+vidc.enc.dcvs.extra-buff-count	u:object_r:camera_prop:s0
 
 # Wi-Fi
 persist.sys.dynamic.nv          u:object_r:vendor_wifi_prop:s0
