@@ -1,5 +1,5 @@
 # zram
-r_dir_file(system_app sysfs_zram)
+r_dir_file(system_app, sysfs_zram)
 
 # Lenovo parts
 allow system_app sysfs_kcal:dir search;
@@ -18,6 +18,10 @@ allow system_app sysfs_speakergain:file rw_file_perms;
 r_dir_file(system_app, sysfs_battery_supply);
 r_dir_file(system_app, sysfs_usb_supply);
 
+# Alarm
+allow system_app hal_alarm_qti_hwservice:hwservice_manager find;
+binder_call(system_app, hal_alarm_qti_default);
+
 # Aosp fm
 allow system_app fm_radio_device:chr_file { ioctl open read };
 
@@ -35,7 +39,7 @@ binder_call(system_app, hal_power_default);
 binder_call(system_app, hal_vibrator_default);
 
 # Iorapd
-binder_call(system_app, iorapd)
+binder_call(system_app, iorapd);
 
 # Vold
 binder_call(system_app, vold);

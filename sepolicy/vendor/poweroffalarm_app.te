@@ -2,3 +2,6 @@
 allow poweroffalarm_app cgroup:file rw_file_perms;
 
 allow poweroffalarm_app hal_alarm_qti_hwservice:hwservice_manager find;
+
+allow poweroffalarm_app system_data_file:dir search;
+allow poweroffalarm_app user_profile_root_file:dir search;
