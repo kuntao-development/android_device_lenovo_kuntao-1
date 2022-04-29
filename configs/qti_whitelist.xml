@@ -63,4 +63,5 @@
     <hidden-api-whitelisted-app package="com.qualcomm.qti.embmstuneaway" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.lpa" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.uim" />
+    <allow-implicit-broadcast action="org.codeaurora.intent.action.PRE_ALERTING_CALL_INFO" />
 </config>
