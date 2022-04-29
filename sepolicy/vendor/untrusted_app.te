@@ -14,6 +14,7 @@ dontaudit untrusted_app {
     proc_version
     proc_zoneinfo
     proc_loadavg
+    proc_qtaguid_stat
     serialno_prop
     oem_unlock_prop
     qemu_hw_prop
