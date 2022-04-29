@@ -1,14 +1,13 @@
+# Sensors
 nosecure.akm.resetdoe               u:object_r:vendor_sensors_prop:s0
+
+# Fp gestures
 persist.vendor.fp.gesture           u:object_r:vendor_fp_gesture_prop:s0
-persist.sys.fp.fingerUpCheck        u:object_r:vendor_fp_gesture_prop:s0
-persist.sys.fp.tplUpdYieldTime        u:object_r:vendor_fp_gesture_prop:s0
-persist.sys.fp.debug.level        u:object_r:vendor_fp_gesture_prop:s0
+persist.sys.fp.        u:object_r:vendor_fp_gesture_prop:s0
 
 # Camera
 camera.clientname               u:object_r:camera_prop:s0
 camera.cpp.   u:object_r:camera_prop:s0
-camera.cpp.dumppreviewpayload   u:object_r:camera_prop:s0
-camera.cpp.dumpvideopayload     u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot      u:object_r:camera_prop:s0
 camera.llvd.preview.disable     u:object_r:camera_prop:s0
 camera.lowpower.record.enable   u:object_r:camera_prop:s0
@@ -18,10 +17,7 @@ disable.cpp.power.collapse      u:object_r:camera_prop:s0
 persist.camera.module.info      u:object_r:camera_prop:s0
 persist.camera.                 u:object_r:camera_prop:s0
 persist.vendor.camera.     u:object_r:camera_prop:s0
-persist.cam.cal.use_class_awb        u:object_r:camera_prop:s0
-persist.cam.cal_dump_awb        u:object_r:camera_prop:s0
-persist.cam.pp.feat.mask        u:object_r:camera_prop:s0
-persist.cam.cal_prt_otp        u:object_r:camera_prop:s0
+persist.cam.        u:object_r:camera_prop:s0
 persist.capture.burst.exposures u:object_r:camera_prop:s0
 persist.debug.set.fixedfps      u:object_r:camera_prop:s0
 persist.debug.sf.showfps        u:object_r:camera_prop:s0
@@ -40,11 +36,10 @@ vidc.enc.dcvs.extra-buff-count	u:object_r:camera_prop:s0
 
 # Wi-Fi
 persist.sys.dynamic.nv          u:object_r:vendor_wifi_prop:s0
-vendor.wlan.                    u:object_r:vendor_wifi_prop:s0
 
 # Smart charger
-persist.radio.callstate      u:object_r:vendor_radio_prop:s0
-ro.build.motfactory           u:object_r:vendor_radio_prop:s0
+persist.radio.callstate      u:object_r:vendor_smart_charger_prop:s0
+ro.build.motfactory           u:object_r:vendor_smart_charger_prop:s0
 
 # Aware
 ro.vendor.aware_available          u:object_r:vendor_aware_available_prop:s0

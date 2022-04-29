@@ -1,0 +1,17 @@
+dontaudit vendor_boringssl_self_test vendor_file:dir read;
+dontaudit vndservicemanager vendor_file:dir read;
+dontaudit irsc_util vendor_file:dir read;
+dontaudit rmt_storage vendor_file:dir read;
+dontaudit rfs_access vendor_file:dir read;
+dontaudit vendor_msm_irqbalanced vendor_file:dir read;
+dontaudit qti vendor_file:dir read;
+dontaudit time_daemon vendor_file:dir read;
+dontaudit hal_rcsservice vendor_file:dir read;
+dontaudit adsprpcd vendor_file:dir read;
+dontaudit hal_imsrtp vendor_file:dir read;
+dontaudit ims vendor_file:dir read;
+dontaudit energyawareness vendor_file:dir read;
+dontaudit cnd vendor_file:dir read;
+dontaudit hal_dpmQmiMgr vendor_file:dir read;
+dontaudit atfwd vendor_file:dir read;
+dontaudit iorapd self:capability { dac_read_search };
