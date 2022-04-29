@@ -89,7 +89,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0 \
-    vendor.vidc.disable.split.mode=1
+    vendor.vidc.disable.split.mode=1 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
