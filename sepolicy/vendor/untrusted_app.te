@@ -12,6 +12,7 @@ dontaudit untrusted_app {
     proc_zoneinfo
     proc_loadavg
     proc_qtaguid_stat
+    proc_pid_max
     serialno_prop
     virtual_ab_prop
     oem_unlock_prop
