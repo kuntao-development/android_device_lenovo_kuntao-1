@@ -166,6 +166,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USES_OLD_MNC_FORMAT := true
 DISABLE_RILD_OEM_HOOK := true
 
+# SVELTE config
+MALLOC_SVELTE := true
+
 # LMKD Stats Log
 TARGET_LMKD_STATS_LOG := true
 
