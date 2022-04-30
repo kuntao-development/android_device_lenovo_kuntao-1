@@ -83,7 +83,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.synaTransport=W \
     persist.vendor.fp.gesture=1 \
     persist.sys.fp.fingerUpCheck=0 \
-    persist.sys.fp.tplUpdYieldTime=400
+    persist.sys.fp.tplUpdYieldTime=400 \
+    persist.sys.fp.debug.level=0
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
