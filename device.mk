@@ -25,6 +25,9 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
