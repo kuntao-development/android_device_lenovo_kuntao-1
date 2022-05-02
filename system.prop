@@ -88,6 +88,3 @@ ro.surface_flinger.max_virtual_display_dimension=4096
 
 # Storage.xml moment
 persist.sys.binary_xml=false
-
-# Watchdog
-ro.hw_timeout_multiplier=3
