@@ -12,8 +12,6 @@ allow mm-qcamerad system_server:unix_stream_socket { read write };
 
 allow mm-qcamerad vendor_camera_data_file:file { r_file_perms create_file_perms };
 
-allow mm-qcamerad { sysfs_jpeg }:file r_file_perms;
-
 get_prop(mm-qcamerad, bootanim_system_prop)
 get_prop(mm-qcamerad, boot_status_prop)
 
