@@ -128,7 +128,7 @@ on post-fs-data
     mkdir /data/vendor/time/ 0700 system system
 
     # Create directory used by audio subsystem
-    mkdir /data/vendor/audio 0770 audio audio
+    mkdir /data/vendor/audio 0770 media audio
 
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
