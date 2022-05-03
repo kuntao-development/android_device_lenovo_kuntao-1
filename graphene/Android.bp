@@ -1,0 +1,19 @@
+android_app_import {
+	name: "GrapheneCamera",
+	owner: "lenovo",
+	apk: "GrapheneCamera.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+        overrides: [
+        "Snap",
+        "Camera",
+        "Camera2",
+        "SnapdragonCamera",
+        ],
+        optional_uses_libs: [
+        "androidx.camera.extensions.impl",
+        ],
+	product_specific: true,
+}
