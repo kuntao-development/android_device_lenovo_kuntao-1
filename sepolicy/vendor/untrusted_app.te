@@ -13,12 +13,20 @@ dontaudit untrusted_app {
     proc_loadavg
     proc_qtaguid_stat
     proc_pid_max
+    cgroup
     serialno_prop
-    virtual_ab_prop
     oem_unlock_prop
     qemu_hw_prop
+    virtual_ab_prop
     qemu_sf_lcd_density_prop
 }:file { read open getattr };
+
+dontaudit untrusted_app {
+    sysfs_net
+    sysfs_switch
+}:dir search;
+
+dontaudit untrusted_app rootfs:dir read;
 
 # Window
 dontaudit untrusted_app window_service:service_manager { find };
