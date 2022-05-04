@@ -20,6 +20,11 @@ persist.vendor.camera.display.lmax=1280x720
 camera.lowpower.record.enable=1
 vidc.enc.dcvs.extra-buff-count=2
 persist.camera.HAL3.enabled=1
+persist.camera.iface.logs=0
+persist.camera.imglib.logs=0
+persist.camera.isp.debug=0
+persist.camera.mct.debug=0
+persist.camera.sensor.debug=0
 
 # Charger
 ro.charger.enable_suspend=true
@@ -64,6 +69,7 @@ persist.vendor.qti.telephony.vt_cam_interface=2
 
 # Media
 media.stagefright.audio.sink=280
+vendor.vidc.debug.level=0
 vendor.vidc.dec.downscalar_width=1920
 vendor.vidc.dec.downscalar_height=1088
 vendor.vidc.disable.split.mode=1
