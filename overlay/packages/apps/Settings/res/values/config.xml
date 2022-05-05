@@ -19,7 +19,6 @@
     <bool name="config_show_adaptive_connectivity">false</bool>
 
     <!-- Battery Health -->
-    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/battery/charge_full</string>
-    <string name="config_batteryDesignCapacity">/sys/class/power_supply/battery/charge_full_design</string>
-    <bool name="config_supportBatteryHealth">true</bool>
+    <string name="config_batteryRemainingCapacityNode">/sys/class/power_supply/battery/charge_full</string>
+    <string name="config_batteryDesignCapacityNode">/sys/class/power_supply/battery/charge_full_design</string>
 </resources>
