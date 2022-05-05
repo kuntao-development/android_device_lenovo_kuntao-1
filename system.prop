@@ -30,7 +30,7 @@ persist.camera.sensor.debug=0
 ro.charger.enable_suspend=true
 
 # Cast
-media.wfd.max_resolution=7
+persist.wfd.legacy.video.mode=7
 
 # Display
 debug.egl.hw=0
