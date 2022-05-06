@@ -83,6 +83,7 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 ro.telephony.default_network=9,1
 ro.telephony.call_ring.multiple=false
+ro.telephony.use_old_mnc_mcc_format=true
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
