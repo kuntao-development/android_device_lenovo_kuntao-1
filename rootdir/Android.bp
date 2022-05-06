@@ -60,18 +60,18 @@ prebuilt_etc {
 
 sh_binary {
     name: "init.qcom.sh",
-    src: "bin/init.qcom.sh",
+    src: "etc/init.qcom.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.early_boot.sh",
-    src: "bin/init.qcom.early_boot.sh",
+    src: "etc/init.qcom.early_boot.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "init.qcom.post_boot.sh",
-    src: "bin/init.qcom.post_boot.sh",
+    src: "etc/init.qcom.post_boot.sh",
     vendor: true,
 }
