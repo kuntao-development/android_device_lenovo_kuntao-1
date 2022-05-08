@@ -47,6 +47,11 @@ PRODUCT_PACKAGES += com.android.tethering.inprocess
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Speed up
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings
+
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Additional native libraries
