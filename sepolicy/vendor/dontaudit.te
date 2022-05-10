@@ -1,7 +1,6 @@
 dontaudit iorapd self:capability { dac_read_search };
 
 dontaudit {
-  vendor_boringssl_self_test
   vndservicemanager
   irsc_util
   rmt_storage
