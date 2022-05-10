@@ -24,6 +24,7 @@ dontaudit untrusted_app {
 dontaudit untrusted_app {
     sysfs_net
     sysfs_switch
+    input_device
 }:dir search;
 
 dontaudit untrusted_app rootfs:dir read;
