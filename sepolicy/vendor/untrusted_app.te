@@ -27,6 +27,10 @@ dontaudit untrusted_app {
     input_device
 }:dir search;
 
+dontaudit untrusted_app self:netlink_route_socket bind;
+
+dontaudit untrusted_app mnt_sdcard_file:lnk_file read;
+
 dontaudit untrusted_app rootfs:dir read;
 
 # Window
