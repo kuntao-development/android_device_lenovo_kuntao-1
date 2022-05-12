@@ -25,6 +25,7 @@ persist.camera.sensor.debug=0
 
 # Charger
 ro.charger.enable_suspend=true
+log.tag.smart_charger=W
 
 # Cast
 persist.wfd.legacy.video.mode=7
@@ -45,6 +46,11 @@ vendor.gralloc.enable_fb_ubwc=1
 
 # GPS
 ro.gps.agps_provider=1
+
+# Fingerprint
+log.tag.synaFpHal=W
+log.tag.SynapticsLIB=W
+log.tag.synaTransport=W
 
 # LMKD
 ro.lmk.use_psi=false

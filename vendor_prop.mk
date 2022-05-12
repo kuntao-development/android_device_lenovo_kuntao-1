@@ -41,10 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=smd
 
-# Charger
-PRODUCT_PROPERTY_OVERRIDES += \
-    log.tag.smart_charger=W
-
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
@@ -78,9 +74,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
-    log.tag.synaFpHal=W \
-    log.tag.SynapticsLIB=W \
-    log.tag.synaTransport=W \
     persist.vendor.fp.gesture=1 \
     persist.sys.fp.fingerUpCheck=0 \
     persist.sys.fp.tplUpdYieldTime=400 \
