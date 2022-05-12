@@ -456,7 +456,7 @@
 
     <!-- Enable AOD even tho we dont have amoled display -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Disable AOD by default -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
