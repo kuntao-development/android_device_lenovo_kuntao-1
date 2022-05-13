@@ -31,6 +31,10 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
 
 # Do not spin up a separate process for the network stack, use an in-process APK.
 PRODUCT_PACKAGES += InProcessNetworkStack
