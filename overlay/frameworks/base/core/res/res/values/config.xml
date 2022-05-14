@@ -561,6 +561,11 @@
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
 
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+        <item>com.android.phone</item>
+        <item>com.android.networkstack.tethering.inprocess</item>
+    </string-array>
+
     <!-- Controls the navigation bar interaction mode:
          0: 3 button mode (back, home, overview buttons)
          1: 2 button mode (back, home buttons + swipe up for overview)
