@@ -28,7 +28,7 @@ ro.charger.enable_suspend=true
 log.tag.smart_charger=W
 
 # Cast
-persist.wfd.legacy.video.mode=7
+persist.wfd.legacy.video.mode=5
 
 # Display
 debug.egl.hw=0
