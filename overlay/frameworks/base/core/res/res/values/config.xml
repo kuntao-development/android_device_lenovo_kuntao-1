@@ -564,7 +564,9 @@
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 
     <string-array name="config_locationExtraPackageNames" translatable="false">
-        <item>com.android.networkstack.tethering.inprocess</item>
+        <item>com.android.bluetooth</item>
+        <item>com.android.phone</item>
+        <item>com.android.networkstack.tethering</item>
     </string-array>
 
     <!-- Controls the navigation bar interaction mode:
