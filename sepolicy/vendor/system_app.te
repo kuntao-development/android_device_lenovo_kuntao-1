@@ -28,9 +28,6 @@ get_prop(system_app, vendor_aware_available_prop);
 # Selinux status
 allow system_app selinuxfs:file r_file_perms;
 
-# Aosp fm
-allow system_app fm_radio_device:chr_file { ioctl open read };
-
 # FPS info
 allow system_app sysfs_fps:file rw_file_perms;
 
