@@ -104,10 +104,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
     ro.soc.model=MSM8953
 
-# Data roaming
-PRODUCT_VENDOR_PROPERTIES := \
-    ro.com.android.dataroaming=false
-
 # Vndk version 12L
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vndk.version=32
