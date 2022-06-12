@@ -568,6 +568,7 @@
         <item>com.android.phone</item>
         <item>com.android.printspooler</item>
         <item>com.android.networkstack.tethering</item>
+        <item>com.qualcomm.qti.cne</item>
     </string-array>
 
     <!-- Controls the navigation bar interaction mode:
