@@ -10,6 +10,20 @@
         android:clickable="false"
         android:selectable="false" />
 
+   <PreferenceCategory
+        android:title="@string/fp_title">
+    <Preference
+        android:key="fingerprint_gestures"
+        android:title="@string/fp_settings_title"
+        android:summary="@string/fp_settings_summary"
+        android:icon="@drawable/ic_fp_gestures"
+        android:persistent="false" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.lenovo.gestures"
+                android:targetClass="com.lenovo.gestures.ButtonSettingsActivity" />
+        </Preference>
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/touchscreen_title">
         <com.lenovo.parts.preferences.SecureSettingSwitchPreference
@@ -62,20 +76,6 @@
             app:min="-40"
             android:icon="@drawable/ic_headphone"
             android:title="@string/headphone_gain" />
-    </PreferenceCategory>
-
-   <PreferenceCategory
-        android:title="@string/fp_title">
-    <Preference
-        android:key="fingerprint_gestures"
-        android:title="@string/fp_settings_title"
-        android:summary="@string/fp_settings_summary"
-        android:icon="@drawable/ic_fp_gestures"
-        android:persistent="false" >
-        <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.lenovo.gestures"
-                android:targetClass="com.lenovo.gestures.ButtonSettingsActivity" />
-        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
