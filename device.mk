@@ -144,11 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.0-service.kuntao
 
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
-
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect
