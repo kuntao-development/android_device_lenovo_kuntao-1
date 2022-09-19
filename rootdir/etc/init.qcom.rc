@@ -242,7 +242,6 @@ on property:sys.boot_completed=1
     restart audioserver
     restart vendor.audio-hal
     restart vendor.media.omx
-    restart vendor.sensors-hal-1-0
     setprop persist.vendor.fp.gesture 1
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
@@ -296,6 +295,14 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks
     onrestart restart audioserver
+
+service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
+    override
+    class hal
+    user system
+    group system input wakelock
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
 
 on property:dev.bootcomplete=1
     restart vendor.ril-daemon
