@@ -21,4 +21,16 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+
+    required: [
+        "com.lenovo.gestures_whitelist"
+    ],
+}
+
+prebuilt_etc {
+    name: "com.lenovo.gestures_whitelist",
+    system_ext_specific: true,
+    sub_dir: "sysconfig",
+    src: "com.lenovo.gestures_whitelist.xml",
+    filename_from_src: true,
 }
