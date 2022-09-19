@@ -18,5 +18,8 @@
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
 
+    <!-- Indicates whether device has a front facing fingerprint sensor (not udfps). -->
+    <bool name="config_is_front_facing_fps" translatable="false">true</bool>
+
     <string name="awaken_maintainer">XiaoAkay</string>
 </resources>
