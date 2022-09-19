@@ -21,5 +21,6 @@
     <!-- Indicates whether device has a front facing fingerprint sensor (not udfps). -->
     <bool name="config_is_front_facing_fps" translatable="false">true</bool>
 
-    <string name="awaken_maintainer">XiaoAkay</string>
+    <!-- Awaken maintainer -->
+    <string name="awaken_maintainer">Akshay Sagar</string>
 </resources>
