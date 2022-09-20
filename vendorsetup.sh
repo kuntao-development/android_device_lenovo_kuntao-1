@@ -8,9 +8,9 @@ echo 'Cloning vendor tree [2/13]'
 # Vendor
 rm -rf vendor/lenovo && git clone https://github.com/Astridxx/proprietary_vendor_lenovo -b lineage-19.1 vendor/lenovo 
 
-echo 'Cloning vendor fm commonsys [3/13]'
-# Fm
-rm -rf vendor/qcom/opensource/fm-commonsys && git clone https://github.com/Astridxx/android_vendor_qcom_opensource_fm-commonsys -b lineage-19.1 vendor/qcom/opensource/fm-commonsys
+echo 'Cloning frameworks base [3/13]'
+# frameworks base
+rm -rf frameworks/base && git clone https://github.com/Astridxx/android_frameworks_base -b 12.1 frameworks/base
 
 echo 'Cloning system netd [4/13]'
 # Netd
