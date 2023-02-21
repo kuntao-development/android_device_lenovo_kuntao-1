@@ -1,0 +1,7 @@
+allow init self:capability sys_nice;
+
+# Battery
+allow init sysfs_usb_supply:file setattr;
+
+# Other
+allow init sysfs:file setattr;

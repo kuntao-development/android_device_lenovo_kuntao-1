@@ -1,0 +1,92 @@
+#
+# system.prop for kuntao
+#
+
+# Audio
+af.fast_track_multiplier=1
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+
+# Bluetooth
+vendor.bluetooth.soc=smd
+
+# Bpf
+ro.kernel.ebpf.supported=false
+
+# Blur on app-launch
+ro.launcher.blur.appLaunch=0
+
+# Camera
+persist.vendor.camera.display.umax=1920x1080
+persist.vendor.camera.display.lmax=1280x720
+camera.lowpower.record.enable=1
+vidc.enc.dcvs.extra-buff-count=2
+persist.camera.HAL3.enabled=1
+
+# Charger
+ro.charger.enable_suspend=true
+persist.log.tag.smart_charger=S
+
+# DRM
+drm.service.enabled=1
+
+# Graphics
+debug.gralloc.enable_fb_ubwc=1
+debug.hwui.renderer=opengl
+debug.renderengine.backend=threaded
+debug.sf.enable_transaction_tracing=false
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.disable_client_composition_cache=1
+renderthread.skia.reduceopstasksplitting=false
+
+# GPS
+ro.gps.agps_provider=1
+
+# Fingerprint
+persist.log.tag.synaFpHal=S
+persist.log.tag.SynapticsLIB=S
+persist.log.tag.synaTransport=S
+
+# Fp gestures
+persist.vendor.fp.gesture=0
+
+# Log
+persist.log.tag.QCamera=S
+persist.log.tag.mm-3a-core=S
+persist.log.tag.mm-camera=S
+persist.log.tag.adbd=S
+persist.log.tag.ANDR-PERF-RESOURCE=S
+persist.log.tag.ANDR-PERF-RESOURCEQS=S
+persist.log.tag.ANDR-PERF-OPTSHANDLER=S
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
+# Media
+media.stagefright.audio.sink=280
+vendor.vidc.dec.downscalar_width=1920
+vendor.vidc.dec.downscalar_height=1088
+vendor.vidc.disable.split.mode=1
+vendor.vidc.enc.disable.pq=true
+vendor.vidc.enc.disable_bframes=1
+vendor.vidc.enc.disable_pframes=1
+vendor.vidc.enc.narrow.searchrange=1
+vendor.video.disable.ubwc=1
+
+# Recovery
+persist.vendor.recovery_update=false
+
+# Radio
+ro.telephony.default_network=9,1
+ro.telephony.call_ring.multiple=false
+
+# SurfaceFlinger
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+
+# Storage
+persist.sys.binary_xml=false

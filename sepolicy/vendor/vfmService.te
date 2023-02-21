@@ -21,8 +21,11 @@ allow vfmService tee_device:chr_file rw_file_perms;
 
 allow vfmService uhid_device:chr_file rw_file_perms;
 
+allow vfmService property_socket:sock_file write;
+
 allow vfmService vfsspi_data_file:dir rw_dir_perms;
 allow vfmService vfsspi_data_file:file create_file_perms;
+allow vfmService system_data_file:dir create_dir_perms;
 
 allow vfmService vfsspi_device:dir create_dir_perms;
 allow vfmService vfsspi_device:chr_file rw_file_perms;
