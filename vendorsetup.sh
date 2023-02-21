@@ -34,6 +34,7 @@ cd ../..
 echo 'Dont cleanup resources from previous frame [8/11]'
 cd frameworks/native
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-19.1/0001-SurfaceFlinger-Dont-cleanup-resources-from-previous-frame.patch
+wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-19.1/0002-SurfaceFlinger-Don-t-cleanup-resources-from-previous.patch
 git apply *.patch
 
 cd ../..
