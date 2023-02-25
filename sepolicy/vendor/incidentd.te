@@ -1,1 +1,0 @@
-allow incidentd sysfs_battery_supply:dir r_dir_perms;

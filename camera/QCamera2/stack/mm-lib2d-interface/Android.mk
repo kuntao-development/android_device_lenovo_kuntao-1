@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
 LOCAL_CFLAGS+= -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
 
-LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter -Wno-compound-token-split-by-macro
+LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_HEADER_LIBRARIES += libutils_headers
@@ -16,8 +16,8 @@ IMGLIB_HEADER_PATH := $(TARGET_OUT_INTERMEDIATES)/include/mm-camera/imglib
 LOCAL_C_INCLUDES += \
     $(IMGLIB_HEADER_PATH) \
     $(LOCAL_PATH)/inc \
-    $(LOCAL_PATH)/../common
-    $(LOCAL_PATH)/../mm-camera-interface/inc \
+    $(LOCAL_PATH)/../common \
+    $(LOCAL_PATH)/../mm-camera-interface/inc
 
 ifeq ($(strip $(TARGET_USES_ION)),true)
     LOCAL_CFLAGS += -DUSE_ION

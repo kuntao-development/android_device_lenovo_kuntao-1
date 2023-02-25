@@ -1,0 +1,20 @@
+dontaudit iorapd self:capability { dac_read_search };
+
+dontaudit {
+  vndservicemanager
+  irsc_util
+  rmt_storage
+  rfs_access
+  vendor_msm_irqbalanced
+  qti
+  time_daemon
+  hal_rcsservice
+  adsprpcd
+  hal_imsrtp
+  ims
+  energyawareness
+  hal_dpmQmiMgr
+  atfwd
+  port-bridge
+  adpl
+} vendor_file:dir read;

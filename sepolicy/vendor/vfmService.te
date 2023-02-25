@@ -3,8 +3,6 @@ type vfmService_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(vfmService)
 
-typeattribute vfmService data_between_core_and_vendor_violators;
-# access to /data/system/users/[0-9]+/fpdata
 allow vfmService fingerprintd_data_file:dir rw_dir_perms;
 allow vfmService fingerprintd_data_file:file create_file_perms;
 
@@ -32,4 +30,7 @@ allow vfmService vfsspi_device:chr_file rw_file_perms;
 allow vfmService vfsspi_device:fifo_file create_file_perms;
 allow vfmService vfsspi_device:file create_file_perms;
 
+dontaudit vfmService vendor_file:dir read;
+
+set_prop(vfmService, vendor_fp_gesture_prop);
 get_prop(vfmService, vendor_fp_gesture_prop);

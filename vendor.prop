@@ -3,10 +3,12 @@
 #
 
 # Audio
+af.fast_track_multiplier=1
+audio.offload.min.duration.secs=30
+audio.offload.video=true
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
-persist.vendor.audio.hw.binder.size_kbyte=1024
 ro.vendor.audio.sdk.fluencetype=none
 vendor.audio_hal.period_size=192
 vendor.audio.hw.aac.encoder=true
@@ -18,8 +20,10 @@ vendor.audio.offload.passthrough=false
 vendor.audio.offload.track.enable=true
 vendor.audio.parser.ip.buffer.size=262144
 vendor.audio.playback.mch.downsample=true
+vendor.audio.pp.asphere.enabled=false
 vendor.audio.safx.pbe.enabled=true
 vendor.voice.path.for.pcm.voip=true
+persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # Bluetooth
 vendor.qcom.bluetooth.soc=smd
@@ -36,21 +40,36 @@ dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
 # Display
+ro.hardware.egl=adreno
+ro.hardware.vulkan=msm8953
 ro.opengles.version=196610
 ro.vendor.display.cabl=0
-vendor.gralloc.enable_fb_ubwc=1
-vendor.display.disable_scaler=1
 vendor.display.disable_skip_validate=1
-vendor.display.enable_default_color_mode=1
+vendor.display.disable_rotator_downscale=1
+vendor.gralloc.enable_fb_ubwc=1
+
+# DRM
+drm.service.enabled=true
 
 # Factory reset protection
 ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/config
+
+# Fp gestures
+persist.vendor.fp.gesture=1
+persist.sys.fp.fingerUpCheck=0
+persist.sys.fp.tplUpdYieldTime=400
+persist.sys.fp.debug.level=0
+
+# Media
+debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
+media.stagefright.thumbnail.prefer_hw_codecs=true
+vendor.vidc.disable.split.mode=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
-vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.radio.multisim.config=dsds
 persist.vendor.radio.custom_ecc=1
@@ -60,8 +79,11 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.data.mode=concurrent
 
 # SOC
-ro.soc.model=MSM8953
 ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8953
+
+# Vndk version 12L
+ro.vndk.version=32
 
 # Time Services
 persist.vendor.delta_time.enable=true

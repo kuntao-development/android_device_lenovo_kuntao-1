@@ -22,3 +22,12 @@ genfscon sysfs   /devices/soc/4080000.qcom,mss/subsys4/name    u:object_r:sysfs_
 
 # RTC
 genfscon sysfs   /devices/soc/qpnp-rtc-8/rtc                          u:object_r:sysfs_rtc:s0
+
+# Lenovo Parts
+genfscon sysfs   /kernel/sound_control/headphone_gain                     u:object_r:sysfs_headphonegain:s0
+genfscon sysfs   /kernel/sound_control/mic_gain                           u:object_r:sysfs_micgain:s0
+genfscon sysfs   /kernel/sound_control/speaker_gain                        u:object_r:sysfs_speakergain:s0
+genfscon sysfs   /kernel/fast_charge/force_fast_charge                        u:object_r:sysfs_usbcharge:s0
+
+# ProcFS
+genfscon proc   /sys/vm/dirty_writeback_centisecs                       u:object_r:proc_dirty:s0
