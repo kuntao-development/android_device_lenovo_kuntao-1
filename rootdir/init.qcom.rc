@@ -165,10 +165,6 @@ on property:sys.boot_completed=1
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
-on property:vold.decrypt=trigger_restart_framework
-    restart vendor.camera-provider-2-4
-    restart vendor.audio-hal
-
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
@@ -203,7 +199,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -228,7 +224,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
@@ -266,6 +262,6 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     override
     class hal
     user system
-    group system input wakelock
+    group system input uhid wakelock
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10

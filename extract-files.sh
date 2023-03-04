@@ -68,7 +68,7 @@ function blob_fixup() {
             sed -i 's|/product/framework/qcrilhook.jar|/system/system_ext/framework/qcrilhook.jar|g' "${2}"
             ;;
         system_ext/lib64/lib-imsvideocodec.so)
-            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            grep -q "libvt_shim.so" "${2}" || "${PATCHELF}" --add-needed "libvt_shim.so" "${2}"
             ;;
         system_ext/lib64/libdpmframework.so)
             grep -q "libshim_dpmframework.so" "${2}" || "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"

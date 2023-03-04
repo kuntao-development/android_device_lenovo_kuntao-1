@@ -32,6 +32,10 @@ persist.log.tag.smart_charger=S
 # DRM
 drm.service.enabled=1
 
+# Disable media transcoding
+persist.sys.fuse.transcode_user_control=true
+persist.sys.fuse.transcode_enabled=false
+
 # Graphics
 debug.gralloc.enable_fb_ubwc=1
 debug.hwui.renderer=opengl
@@ -40,6 +44,7 @@ debug.sf.enable_transaction_tracing=false
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.disable_client_composition_cache=1
 renderthread.skia.reduceopstasksplitting=false
+debug.hwui.skia_atrace_enabled=false
 
 # GPS
 ro.gps.agps_provider=1
@@ -57,13 +62,20 @@ persist.log.tag.QCamera=S
 persist.log.tag.mm-3a-core=S
 persist.log.tag.mm-camera=S
 persist.log.tag.adbd=S
+persist.log.tag.TrafficController=S
+persist.log.tag.TrafficControllerJni=S
+persist.log.tag.NetworkStats=S
+persist.log.tag.BpfNetMaps=S
+persist.log.tag.BpfNetworkStats=S
+persist.log.tag.BpfInterfaceMapUpdater=S
+persist.log.tag.BpfHandler=S
+persist.log.tag.ANDR-PERF-MPCTL=S
 persist.log.tag.ANDR-PERF-RESOURCE=S
 persist.log.tag.ANDR-PERF-RESOURCEQS=S
 persist.log.tag.ANDR-PERF-OPTSHANDLER=S
 
 # IMS
 persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
 
 # Media
 media.stagefright.audio.sink=280
@@ -90,3 +102,6 @@ ro.surface_flinger.max_virtual_display_dimension=4096
 
 # Storage
 persist.sys.binary_xml=false
+
+# Zygote
+zygote.critical_window.minute=10
