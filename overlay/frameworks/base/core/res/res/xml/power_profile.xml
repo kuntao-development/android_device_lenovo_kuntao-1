@@ -38,8 +38,8 @@
         <value>171</value>
         <value>181</value>
     </array>
-    <item name="cpu.suspend">4.23</item>
-    <item name="cpu.idle">93</item>
+    <item name="cpu.suspend">93</item>
+    <item name="cpu.idle">4.23</item>
     <item name="bluetooth.controller.voltage">3300</item>
     <item name="battery.capacity">5000</item>
 </device>
