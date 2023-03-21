@@ -159,6 +159,7 @@ VENDOR_SECURITY_PATCH := 2017-11-01
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
