@@ -65,5 +65,8 @@ on enable-low-power
     chown system system /sys/kernel/sound_control/mic_gain
     restorecon_recursive /sys/kernel/sound_control
 
+    # Sensors
+    restorecon --recursive /sys/bus/iio/devices/iio:device6/buffer/enable
+
 on property:sys.boot_completed=1
     trigger enable-low-power
