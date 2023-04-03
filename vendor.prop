@@ -40,13 +40,14 @@ dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
 # Display
-ro.hardware.egl=adreno
-ro.hardware.vulkan=msm8953
 ro.opengles.version=196610
 ro.vendor.display.cabl=0
 vendor.display.disable_skip_validate=1
 vendor.display.disable_rotator_downscale=1
 vendor.gralloc.enable_fb_ubwc=1
+vendor.display.disable_scaler=1
+vendor.display.enable_default_color_mode=1
+vendor.display.support_writeback=0
 
 # DRM
 drm.service.enabled=true
@@ -59,12 +60,6 @@ persist.vendor.fp.gesture=1
 persist.sys.fp.fingerUpCheck=0
 persist.sys.fp.tplUpdYieldTime=400
 persist.sys.fp.debug.level=0
-
-# Media
-debug.stagefright.omx_default_rank.sw-audio=1
-debug.stagefright.omx_default_rank=0
-media.stagefright.thumbnail.prefer_hw_codecs=true
-vendor.vidc.disable.split.mode=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
