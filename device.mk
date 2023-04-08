@@ -244,6 +244,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/synaptics_dsx_i2c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx_i2c.kl \
     $(LOCAL_PATH)/keylayout/Validity_Navigation_Sensor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Validity_Navigation_Sensor.kl
 
+# KeyDisabler
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.kuntao
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
