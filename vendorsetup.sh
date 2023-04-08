@@ -45,7 +45,7 @@ echo 'Adding patch to Trebuchet for Kuntao [10/17]'
 cd packages/apps/Trebuchet
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-light/patches_platform/packages_apps_Trebuchet/0001-Trebuchet-Move-clear-all-button-to-actions-view.patch
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-light/patches_platform_personal/packages_apps_Trebuchet/0001-Trebuchet-Make-overview-scrim-transparent-again.patch
-wget 
+wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-light/patches_platform_personal/packages_apps_Trebuchet/0002-Trebuchet-Kill-haptics-in-recents.patch
 git apply *.patch
 
 cd ../../..
