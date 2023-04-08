@@ -57,6 +57,10 @@ ro.lmk.kill_timeout_ms=100
 ro.lmk.use_minfree_levels=true
 ro.lmk.log_stats=true
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Media
 media.stagefright.audio.sink=280
 vendor.vidc.debug.level=0
