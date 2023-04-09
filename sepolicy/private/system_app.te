@@ -1,1 +1,5 @@
 binder_call(system_app, storaged)
+
+dontaudit system_app {
+  tracingproxy_service
+}:service_manager find;
