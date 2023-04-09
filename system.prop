@@ -75,6 +75,10 @@ persist.log.tag.ANDR-PERF-RESOURCE=S
 persist.log.tag.ANDR-PERF-RESOURCEQS=S
 persist.log.tag.ANDR-PERF-OPTSHANDLER=S
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Media
 media.stagefright.audio.sink=280
 vendor.vidc.dec.downscalar_width=1920
