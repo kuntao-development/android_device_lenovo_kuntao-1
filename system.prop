@@ -96,6 +96,7 @@ persist.vendor.recovery_update=false
 # Radio
 ro.telephony.default_network=9,1
 ro.telephony.call_ring.multiple=false
+persist.sys.radio.force_lte_ca=true
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
