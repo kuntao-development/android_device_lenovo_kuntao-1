@@ -39,6 +39,7 @@ dalvik.vm.heapmaxfree=8m
 ro.opengles.version=196610
 ro.vendor.display.cabl=0
 vendor.gralloc.enable_fb_ubwc=1
+vendor.display.support_writeback=0
 vendor.display.disable_scaler=1
 vendor.display.disable_skip_validate=1
 vendor.display.enable_default_color_mode=1
