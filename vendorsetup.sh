@@ -37,6 +37,7 @@ cd frameworks/base
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0009-hwui-reset-to-android-13.0.0_r13.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0002-Disable-vendor-mismatch-warning.patch
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-light/patches_platform/frameworks_base/0013-core-Remove-old-app-target-SDK-dialog.patch
+wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-td/patches_treble_td/platform_frameworks_base/0020-Fix-Wakelock-issue.patch
 git apply *.patch
 
 cd ../..
@@ -85,6 +86,7 @@ echo 'Adding patch to system core for Kuntao [15/17]'
 cd system/core
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0003-Add-no-BPF-usecase-support.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0001-Camera-Add-feature-extensions.patch
+wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-20-td/patches_treble_td/platform_system_core/0006-Panic-into-recovery-rather-than-bootloader.patch
 git apply *.patch
 
 cd ../..
