@@ -63,6 +63,7 @@ persist.log.tag.QCamera=S
 persist.log.tag.mm-3a-core=S
 persist.log.tag.mm-camera=S
 persist.log.tag.adbd=S
+persist.log.tag.ResourcesCompat=S
 persist.log.tag.TrafficController=S
 persist.log.tag.TrafficControllerJni=S
 persist.log.tag.NetworkStats=S
