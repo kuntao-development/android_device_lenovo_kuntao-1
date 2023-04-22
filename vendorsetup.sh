@@ -42,7 +42,6 @@ cd ../..
 
 echo 'Adding patch to frameworks native for Kuntao [10/15]'
 cd frameworks/native
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0001-Disable-gpu-service.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0002-SurfaceFlinger-Don-t-cleanup-resources-from-previous.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0003-SurfaceFlinger-Don-t-cleanup-resources-from-previous.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20.0/0004-SurfaceFlinger-Don-t-cleanup-resources-from-previous.patch
