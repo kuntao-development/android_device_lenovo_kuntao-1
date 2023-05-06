@@ -39,6 +39,7 @@ wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/framewor
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/framework_base/0015-BatteryStatsService-limit-logspam.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/framework_base/0016-Fix-error-com-google-android-gms-persistent.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/framework_base/0017-Privapp-permissions-Grant-missing-TelephonyProvider-perm.patch
+wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/framework_base/0018-LightsService-Mute-an-annoying-error-message.patch
 git apply *.patch
 
 cd ../..
@@ -107,6 +108,7 @@ cd packages/modules/Connectivity
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_modules_Connectivity/0001-Allow-failing-to-load-bpf-programs-for-BPF-less-devices.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_modules_Connectivity/0002-BpfMap-implemented-new-checks-for-kernel-4-14.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_modules_Connectivity/0003-Dont-delete-UID-from-BpfMap-on-BPF-less-kernel.patch
+wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_modules_Connectivity/0004-Disable-TrafficStats-debugging.patch
 git apply *.patch
 
 cd ../../..
