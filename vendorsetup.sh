@@ -116,8 +116,6 @@ echo 'Adding patch for DeskClock [14/15]'
 cd packages/apps/DeskClock
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_apps_DeskClock/0001-DeskClock-Ensure-ringtone-is-playing-when-starting-the-crescendo-effect.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_apps_DeskClock/0002-DeskClock-Remove-night-mode.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_apps_DeskClock/0003-DeskClock-Adapt-digital-clocks-to-S-style.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages_apps_DeskClock/0004-DeskClock-Wallpaper-based-text-coloring-for-digital-.patch
 git apply *.patch
 
 cd ../../..
