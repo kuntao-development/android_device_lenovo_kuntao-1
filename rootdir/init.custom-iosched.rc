@@ -85,3 +85,6 @@ on property:sys.io.scheduler=zen
 
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "zen"
+
+on late-fs && property:ro.kernel.version=3.18
+    setprop bootreceiver.enable 0
