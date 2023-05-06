@@ -56,7 +56,6 @@ echo 'Adding patch to frameworks native for Kuntao [8/15]'
 cd frameworks/native
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/frameworks_native/0001-SurfaceFlinger-Dont-cleanup-resources-from-previous-frame-on-display.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/frameworks_native/0002-SF-Bring-back-support-for-disabling-backpressure-propagation.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/frameworks_native/0003-Disable-gpu-service-for-bpf.patch
 git apply *.patch
 
 cd ../..
