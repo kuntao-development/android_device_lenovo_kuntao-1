@@ -4,6 +4,7 @@ type debugfs_wlan, debugfs_type, fs_type;
 type sysfs_temperature, fs_type, sysfs_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
 type vfsspi_data_file, file_type, data_file_type, core_data_file_type;
+type sysfs_fps, fs_type, sysfs_type;
 type sysfs_torch, fs_type, sysfs_type;
 type sysfs_kcal, fs_type, sysfs_type;
 type sysfs_headphonegain, fs_type, sysfs_type;
