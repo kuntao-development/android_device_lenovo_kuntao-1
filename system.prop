@@ -11,9 +11,6 @@ vendor.bluetooth.soc=smd
 # Bpf
 ro.kernel.ebpf.supported=false
 
-# Blur on app-launch
-ro.launcher.blur.appLaunch=false
-
 # Camera
 persist.vendor.camera.display.umax=1920x1080
 persist.vendor.camera.display.lmax=1280x720
@@ -96,9 +93,6 @@ ro.telephony.use_old_mnc_mcc_format=true
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
-
-# System Server
-arm64.memtag.process.system_server=off
 
 # Storage
 persist.sys.binary_xml=false
