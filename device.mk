@@ -187,10 +187,6 @@ PRODUCT_PACKAGES += \
     RevampedFMRadio \
     libqcomfmjni:64
 
-# Google Photos
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
-
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
@@ -244,10 +240,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/synaptics_dsx_i2c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx_i2c.kl \
     $(LOCAL_PATH)/keylayout/Validity_Navigation_Sensor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Validity_Navigation_Sensor.kl
 
-# KeyDisabler
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.kuntao
-
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
@@ -260,10 +252,6 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
-
-# IORap
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.iorapd.enable=false
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
