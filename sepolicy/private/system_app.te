@@ -1,3 +1,5 @@
+binder_call(system_app, system_suspend)
+binder_call(system_app, wificond)
 binder_call(system_app, storaged)
 
 dontaudit system_app {
