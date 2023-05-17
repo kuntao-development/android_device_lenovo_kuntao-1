@@ -4,3 +4,7 @@ binder_call(platform_app, hal_alarm_qti_default)
 
 # Audio
 get_prop(platform_app, audio_config_prop)
+
+# allow SystemUI to find and bind Google Battery HAL
+allow platform_app hal_googlebattery_service:service_manager find;
+binder_call(platform_app, hal_googlebattery)
