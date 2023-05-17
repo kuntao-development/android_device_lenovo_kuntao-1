@@ -33,10 +33,6 @@ wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framewo
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/Revert-Treat-process-group-creation-failure-due-to-a-dead-process-as-non-fatal.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/Revert-Treat-failure-to-create-a-process-group-as-fatal.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0001-Disable-magnifier-position-animation.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0003-Revert-CachedAppOptimizer-use-new-cgroup-api-for-freezer.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0004-Revert-CachedAppOptimizer-remove-native-freezer-enabling-code.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0005-Revert-CachedAppOptimizer-dont-hardcode-freezer-path.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0006-CachedAppOptimizer-revert-freezer-to-cgroups-v1.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0010-Disable-vendor-mismatch-warning.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0011-hwui-reset-to-android-13-0-0-r13.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/framework_base/0014-SettingsProvider-Handle-write-device-config-permission.patch
@@ -49,10 +45,6 @@ patch -p1 <Revert-Do-not-crash-webview-if-its-group-creation-fails-due-to-a-dead
 patch -p1 <Revert-Treat-process-group-creation-failure-due-to-a-dead-process-as-non-fatal.patch
 patch -p1 <Revert-Treat-failure-to-create-a-process-group-as-fatal.patch
 patch -p1 <0001-Disable-magnifier-position-animation.patch
-patch -p1 <0003-Revert-CachedAppOptimizer-use-new-cgroup-api-for-freezer.patch
-patch -p1 <0004-Revert-CachedAppOptimizer-remove-native-freezer-enabling-code.patch
-patch -p1 <0005-Revert-CachedAppOptimizer-dont-hardcode-freezer-path.patch
-patch -p1 <0006-CachedAppOptimizer-revert-freezer-to-cgroups-v1.patch
 patch -p1 <0010-Disable-vendor-mismatch-warning.patch
 patch -p1 <0011-hwui-reset-to-android-13-0-0-r13.patch
 patch -p1 <0014-SettingsProvider-Handle-write-device-config-permission.patch
@@ -135,9 +127,7 @@ cd ../..
 echo 'Adding patch to DeskClock [10/10]'
 cd packages/apps/DeskClock
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/packages_apps_DeskClock/0001-DeskClock-Ensure-ringtone-is-playing-when-starting-the-crescendo-effect.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/RisingOS-13/packages_apps_DeskClock/0002-DeskClock-Remove-night-mode.patch
 patch -p1 <0001-DeskClock-Ensure-ringtone-is-playing-when-starting-the-crescendo-effect.patch
-patch -p1 <0002-DeskClock-Remove-night-mode.patch
 cd ../../..
 
 echo 'Patching process completed'
