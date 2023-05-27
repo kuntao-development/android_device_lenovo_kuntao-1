@@ -73,6 +73,7 @@ persist.log.tag.ANDR-PERF-MPCTL=S
 persist.log.tag.ANDR-PERF-RESOURCE=S
 persist.log.tag.ANDR-PERF-RESOURCEQS=S
 persist.log.tag.ANDR-PERF-OPTSHANDLER=S
+persist.log.tag.FastChargingPreferenceController=S
 
 # IMS
 persist.dbg.volte_avail_ovr=1
