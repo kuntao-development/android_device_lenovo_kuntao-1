@@ -6,15 +6,11 @@ persist.vendor.fp.gesture           u:object_r:vendor_fp_gesture_prop:s0
 persist.sys.fp.        u:object_r:vendor_fp_gesture_prop:s0
 
 # Camera
-camera.clientname               u:object_r:camera_prop:s0
-camera.cpp.   u:object_r:camera_prop:s0
+camera.              u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot      u:object_r:camera_prop:s0
-camera.llvd.preview.disable     u:object_r:camera_prop:s0
-vendor.camera.lowpower.record.enable   u:object_r:camera_prop:s0
 cpp.set.clock                   u:object_r:camera_prop:s0
 debug.camera.     u:object_r:camera_prop:s0
 disable.cpp.power.collapse      u:object_r:camera_prop:s0
-persist.camera.module.info      u:object_r:camera_prop:s0
 persist.camera.                 u:object_r:camera_prop:s0
 persist.vendor.camera.     u:object_r:camera_prop:s0
 persist.cam.        u:object_r:camera_prop:s0
@@ -26,13 +22,12 @@ persist.tnr.process.plates             u:object_r:camera_prop:s0
 persist.enable.max.pending.buf  u:object_r:camera_prop:s0
 persist.llvd.preview.disable    u:object_r:camera_prop:s0
 persist.partial.skip            u:object_r:camera_prop:s0
-persist.vendor.camera.dbglog    u:object_r:camera_prop:s0
-ro.camera.req.fmq.size          u:object_r:camera_prop:s0
-ro.camera.res.fmq.size          u:object_r:camera_prop:s0
+ro.camera.          u:object_r:camera_prop:s0
 persist.dual.gain_tune          u:object_r:camera_prop:s0
 persist.dual.line_tune          u:object_r:camera_prop:s0
 persist.imglib.cf.          u:object_r:camera_prop:s0
 vidc.enc.dcvs.extra-buff-count	u:object_r:camera_prop:s0
+vendor.camera.lowpower.record.enable   u:object_r:camera_prop:s0
 
 # Slm
 persist.vendor.slm.             u:object_r:vendor_slm_prop:s0
@@ -49,6 +44,3 @@ ro.build.motfactory           u:object_r:vendor_smart_charger_prop:s0
 
 # Aware
 ro.vendor.aware_available          u:object_r:vendor_aware_available_prop:s0
-
-# FM
-ro.vendor.fm.use_audio_session      u:object_r:vendor_fm_prop:s0

@@ -26,31 +26,9 @@
 #
 
 on enable-low-power
-    # KCAL
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
-    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
-
     # Vibration
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
-
-    # Flashlight
-    chown system system /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_0/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_0/max_brightness
-    chown system system /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
 
     # USB Fast charge
     chown system system /sys/kernel/fast_charge/force_fast_charge
@@ -64,9 +42,6 @@ on enable-low-power
     chown system system /sys/kernel/sound_control/speaker_gain
     chown system system /sys/kernel/sound_control/mic_gain
     restorecon_recursive /sys/kernel/sound_control
-
-    # Sensors
-    restorecon --recursive /sys/bus/iio/devices/iio:device6/buffer/enable
 
 on property:sys.boot_completed=1
     trigger enable-low-power

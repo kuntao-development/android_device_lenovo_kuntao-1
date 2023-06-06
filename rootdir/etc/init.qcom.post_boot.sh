@@ -196,6 +196,14 @@ echo 200000 > /proc/sys/kernel/sched_freq_dec_notify
 echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
 echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
+# Set 512 for > 3GB
+echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+echo 512 > /sys/block/mmcblk0/queue/read_ahead_kb
+echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+echo 512 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
+echo 512 > /sys/block/dm-0/queue/read_ahead_kb
+echo 512 > /sys/block/dm-1/queue/read_ahead_kb
+
 setprop vendor.post_boot.parsed 1
 
 # Let kernel know our image version/variant/crm_version

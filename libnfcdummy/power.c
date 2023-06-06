@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019,2022 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,27 +14,12 @@
  * limitations under the License.
  */
 
-#include "KeyDisabler.h"
+#define UNUSED(x) UNUSED_ ## x __attribute__((__unused__))
 
-namespace vendor {
-namespace lineage {
-namespace touch {
-namespace V1_0 {
-namespace implementation {
-
-// Methods from ::vendor::lineage::touch::V1_0::IKeyDisabler follow.
-Return<bool> KeyDisabler::isEnabled() {
-    return enabled_;
+int acquire_wake_lock(int UNUSED(lock), const char* UNUSED(id)) {
+    return 0;
 }
 
-Return<bool> KeyDisabler::setEnabled(bool enabled) {
-    enabled_ = enabled;
-
-    return true;
+int release_wake_lock(const char* UNUSED(id)) {
+    return 0;
 }
-
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace touch
-}  // namespace lineage
-}  // namespace vendor

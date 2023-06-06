@@ -1,24 +1,5 @@
-dontaudit iorapd self:capability { dac_read_search };
+dontaudit atrace self:capability { dac_read_search };
 dontaudit fsck_untrusted self:capability { sys_resource };
-
-dontaudit {
-  vndservicemanager
-  irsc_util
-  rmt_storage
-  rfs_access
-  vendor_msm_irqbalanced
-  qti
-  time_daemon
-  hal_rcsservice
-  adsprpcd
-  hal_imsrtp
-  ims
-  energyawareness
-  hal_dpmQmiMgr
-  atfwd
-  port-bridge
-  adpl
-} vendor_file:dir read;
 
 dontaudit system_app {
   system_suspend_control_service
