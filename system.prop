@@ -13,6 +13,7 @@ vendor.bluetooth.soc=smd
 
 # Bpf
 ro.kernel.ebpf.supported=false
+persist.device_config.tethering.bpf_net_maps_enable_java_bpf_map=false
 
 # Camera
 persist.vendor.camera.display.umax=1920x1080
