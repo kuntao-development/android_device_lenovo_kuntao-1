@@ -155,9 +155,6 @@ DISABLE_RILD_OEM_HOOK := true
 # LMKD Stats Log
 TARGET_LMKD_STATS_LOG := true
 
-# SVELTE config
-MALLOC_SVELTE := true
-
 # Security patch level
 VENDOR_SECURITY_PATCH := 2017-11-01
 

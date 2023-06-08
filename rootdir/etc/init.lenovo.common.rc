@@ -19,6 +19,13 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
+    # CABC feature
+    chown system system /sys/class/graphics/fb0/cabc
+    # HBM feature
+    chown system system /sys/class/graphics/fb0/hbm
+    # ACL feature
+    chown system system /sys/class/graphics/fb0/acl
+
     # Double tap
     chown system system /sys/board_properties/tpd_suspend_status
     chmod 0664 /sys/board_properties/tpd_suspend_status
@@ -33,6 +40,9 @@ on boot
     mkdir /dev/validity 0775 system system
     chown system system /sys/bus/platform/devices/soc:fingerprint@0/shutdown
     chmod 0660 /sys/bus/platform/devices/soc:fingerprint@0/shutdown
+
+    # Sensors
+    restorecon --recursive /sys/bus/iio/devices/iio:device6/buffer/enable
 
 on post-fs
     # Proximity and Light sensor

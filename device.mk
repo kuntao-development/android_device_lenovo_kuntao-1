@@ -17,15 +17,7 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-# Optimize
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-USE_DEX2OAT_DEBUG := false
-WITH_DEXPREOPT_DEBUG_INFO := false
+    $(LOCAL_PATH)/overlay-banana
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -273,11 +265,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.kuntao
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -395,10 +382,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

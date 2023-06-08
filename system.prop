@@ -13,6 +13,8 @@ vendor.bluetooth.soc=smd
 
 # Bpf
 ro.kernel.ebpf.supported=false
+persist.device_config.tethering.bpf_net_maps_enable_java_bpf_map=false
+persist.vendor.net.doxlat=false
 
 # Camera
 persist.vendor.camera.display.umax=1920x1080
@@ -71,7 +73,6 @@ persist.log.tag.ResourcesCompat=S
 persist.log.tag.ANDR-PERF-RESOURCE=S
 persist.log.tag.ANDR-PERF-RESOURCEQS=S
 persist.log.tag.ANDR-PERF-OPTSHANDLER=S
-persist.log.tag.FastChargingPreferenceController=S
 
 # LMKD
 ro.lmk.use_psi=false
@@ -88,7 +89,6 @@ ro.lmk.log_stats=true
 
 # IMS
 persist.dbg.volte_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
 
 # Media
 media.stagefright.audio.sink=280
@@ -122,6 +122,7 @@ persist.vendor.recovery_update=false
 # Radio
 ro.telephony.default_network=9,1
 ro.telephony.call_ring.multiple=false
+persist.sys.radio.force_lte_ca=false
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true

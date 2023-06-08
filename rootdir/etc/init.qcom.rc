@@ -191,9 +191,6 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_expire_centisecs 60000
     write /proc/sys/vm/dirty_writeback_centisecs 60000
 
-    # Sensors
-    restorecon_recursive /sys/bus/iio/devices/iio:device6/buffer/enable
-
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
