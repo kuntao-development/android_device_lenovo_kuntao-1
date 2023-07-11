@@ -177,7 +177,6 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-
     # write caching
     # Tell the kernel to use up to 99% of the RAM as cache for writes
     # and instruct kernel to use up to 50% of RAM before slowing down

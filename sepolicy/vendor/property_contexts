@@ -8,7 +8,6 @@ persist.sys.fp.        u:object_r:vendor_fp_gesture_prop:s0
 # Camera
 camera.              u:object_r:camera_prop:s0
 cameradaemon.SaveMemAtBoot      u:object_r:camera_prop:s0
-vendor.camera.lowpower.record.enable   u:object_r:camera_prop:s0
 cpp.set.clock                   u:object_r:camera_prop:s0
 debug.camera.     u:object_r:camera_prop:s0
 disable.cpp.power.collapse      u:object_r:camera_prop:s0
