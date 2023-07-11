@@ -19,7 +19,6 @@ persist.vendor.camera.display.umax=1920x1080
 persist.vendor.camera.display.lmax=1280x720
 vendor.camera.lowpower.record.enable=1
 vidc.enc.dcvs.extra-buff-count=2
-persist.camera.HAL3.enabled=1
 persist.camera.iface.logs=0
 persist.camera.imglib.logs=0
 persist.camera.isp.debug=0
