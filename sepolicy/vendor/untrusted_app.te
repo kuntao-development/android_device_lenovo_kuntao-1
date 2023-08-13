@@ -41,3 +41,6 @@ dontaudit untrusted_app window_service:service_manager { find };
 
 # MemTrack
 dontaudit untrusted_app hal_memtrack_hwservice:hwservice_manager { find };
+
+# Zram
+r_dir_file(untrusted_app, sysfs_zram)

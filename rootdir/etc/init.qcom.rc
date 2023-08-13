@@ -146,8 +146,6 @@ on post-fs-data
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
 
-    setprop vold.post_fs_data_done 1
-
     # Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 2770 root system
     rm /data/vendor/perfd/default_values
@@ -198,12 +196,6 @@ on property:vendor.radio.atfwd.start=false
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
-on property:vold.decrypt=trigger_restart_framework
-    restart vendor.sensors-hal-1-0
-    restart vendor.camera-provider-2-4
-    restart vendor.audio-hal
-    restart wcnss-service
-
 # FM
 on property:hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
@@ -220,13 +212,16 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
+
+on property:persist.sys.xtra-daemon.enabled=*
+    restart loc_launcher
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -246,7 +241,6 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start vendor.sensors-hal-1-0
     restart audioserver
     restart vendor.audio-hal
     restart vendor.media.omx
@@ -295,7 +289,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     # setting RLIMIT_RTPRIO allows binder RT priority inheritance
     rlimit rtprio 10 10
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks
+    task_profiles ProcessCapacityHigh
     onrestart restart audioserver
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm

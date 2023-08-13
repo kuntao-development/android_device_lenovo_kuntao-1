@@ -27,6 +27,7 @@ persist.dual.gain_tune          u:object_r:camera_prop:s0
 persist.dual.line_tune          u:object_r:camera_prop:s0
 persist.imglib.cf.          u:object_r:camera_prop:s0
 vidc.enc.dcvs.extra-buff-count	u:object_r:camera_prop:s0
+vendor.camera.lowpower.record.enable   u:object_r:camera_prop:s0
 
 # Slm
 persist.vendor.slm.             u:object_r:vendor_slm_prop:s0
@@ -43,6 +44,3 @@ ro.build.motfactory           u:object_r:vendor_smart_charger_prop:s0
 
 # Aware
 ro.vendor.aware_available          u:object_r:vendor_aware_available_prop:s0
-
-# FM
-ro.vendor.fm.use_audio_session      u:object_r:vendor_fm_prop:s0

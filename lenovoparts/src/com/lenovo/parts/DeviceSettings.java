@@ -9,11 +9,10 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
-import com.lenovo.parts.kcal.KCalSettingsActivity;
-import com.lenovo.parts.preferences.SecureSettingListPreference;
-import com.lenovo.parts.preferences.SecureSettingSwitchPreference;
-import com.lenovo.parts.preferences.VibrationSeekBarPreference;
-import com.lenovo.parts.preferences.CustomSeekBarPreference;
+import com.lenovo.parts.SecureSettingListPreference;
+import com.lenovo.parts.SecureSettingSwitchPreference;
+import com.lenovo.parts.VibrationSeekBarPreference;
+import com.lenovo.parts.CustomSeekBarPreference;
 
 import com.lenovo.parts.R;
 
@@ -23,7 +22,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "LenovoParts";
 
     private static final String CATEGORY_DISPLAY = "display";
-    private static final String PREF_DEVICE_KCAL = "device_kcal";
 
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
     public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
@@ -34,11 +32,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final  String PREF_HEADPHONE_GAIN = "headphone_gain";
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
-
-    public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
-    public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
-    private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-22/leds/led:torch_0/max_brightness";
-    private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness";
 
     public static final String USB_FASTCHARGE_KEY = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
@@ -58,14 +51,6 @@ public class DeviceSettings extends PreferenceFragment implements
         headphone_gain.setEnabled(FileUtils.fileWritable(HEADPHONE_GAIN_PATH));
         headphone_gain.setOnPreferenceChangeListener(this);
 
-        CustomSeekBarPreference white_torch_brightness = (CustomSeekBarPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
-        white_torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH));
-        white_torch_brightness.setOnPreferenceChangeListener(this);
-
-        CustomSeekBarPreference yellow_torch_brightness = (CustomSeekBarPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
-        yellow_torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_2_BRIGHTNESS_PATH));
-        yellow_torch_brightness.setOnPreferenceChangeListener(this);
-
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
 
         SecureSettingSwitchPreference glovemode = (SecureSettingSwitchPreference) findPreference(PREF_GLOVE_MODE);
@@ -77,25 +62,14 @@ public class DeviceSettings extends PreferenceFragment implements
         usbfastcharge.setEnabled(FileUtils.fileWritable(USB_FASTCHARGE_PATH));
         usbfastcharge.setChecked(FileUtils.getFileValueAsBoolean(USB_FASTCHARGE_PATH, true));
         usbfastcharge.setOnPreferenceChangeListener(this);
-
-        Preference kcal = findPreference(PREF_DEVICE_KCAL);
-        kcal.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
-            startActivity(intent);
-            return true;
-        });
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case KEY_WHITE_TORCH_BRIGHTNESS:
-                FileUtils.setValue(TORCH_1_BRIGHTNESS_PATH, (int) value);
-                break;
-
-            case KEY_YELLOW_TORCH_BRIGHTNESS:
-                FileUtils.setValue(TORCH_2_BRIGHTNESS_PATH, (int) value);
+            case USB_FASTCHARGE_KEY:
+                FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
 
             case PREF_VIBRATION_STRENGTH:
@@ -109,10 +83,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_GLOVE_MODE:
                 FileUtils.setValue(GLOVE_MODE_PATH, (boolean) value);
-                break;
-
-            case USB_FASTCHARGE_KEY:
-                FileUtils.setValue(USB_FASTCHARGE_PATH, (boolean) value);
                 break;
 
             default:

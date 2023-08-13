@@ -1,4 +1,4 @@
-package com.lenovo.parts.preferences;
+package com.lenovo.parts;
 
 import android.content.Context;
 import android.provider.Settings;

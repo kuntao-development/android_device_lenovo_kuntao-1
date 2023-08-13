@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,12 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
+#define UNUSED(x) UNUSED_ ## x __attribute__((__unused__))
 
-#define BTM_DEF_LOCAL_NAME             "Lenovo P2a42"
+int acquire_wake_lock(int UNUSED(lock), const char* UNUSED(id)) {
+    return 0;
+}
 
-#define BLE_VND_INCLUDED               TRUE
-#define BTM_SCO_ENHANCED_SYNC_ENABLED  FALSE
-#define MAX_ACL_CONNECTIONS            16
-#define MAX_L2CAP_CHANNELS             32
-#define GATT_MAX_PHY_CHANNEL           10
-
-/* Increasing SEPs to 35 from 6 to support SHO/MCast i.e. two streams per codec */
-#define AVDT_NUM_SEPS                  35
-
-#endif
+int release_wake_lock(const char* UNUSED(id)) {
+    return 0;
+}
