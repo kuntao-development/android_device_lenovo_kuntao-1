@@ -28,6 +28,9 @@ persist.camera.sensor.debug=0
 # Charger
 ro.charger.enable_suspend=true
 
+# Cast
+media.wfd.max_resolution=5
+
 # Display
 debug.sf.recomputecrop=0
 debug.gralloc.enable_fb_ubwc=1

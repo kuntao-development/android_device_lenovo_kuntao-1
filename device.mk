@@ -17,7 +17,7 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-bliss
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
@@ -36,7 +36,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Speed up
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings
+    Settings \
+    Launcher3QuickStep
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
@@ -240,10 +241,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/synaptics_dsx_i2c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx_i2c.kl \
     $(LOCAL_PATH)/keylayout/Validity_Navigation_Sensor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Validity_Navigation_Sensor.kl
 
-# KeyDisabler
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.kuntao
-
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
@@ -383,9 +380,10 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
 
-# Trust HAL
+# Turbo & SettingsIntelligenceGoogle
 PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+    TurboPrebuilt \
+    SettingsIntelligenceGooglePrebuilt
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
