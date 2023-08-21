@@ -124,11 +124,9 @@ echo 'Adding patch to Vendor lineage [9/12]'
 cd vendor/lineage
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/vendor_lineage/0001-soong-Add-disable-postrender-cleanup-conditional.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/vendor_lineage/0002-overlay-Add-google-OTA-to-global-disabledComponent.patch
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/vendor_lineage/0003-Allow-gms-to-access-persistent-data-partition.patch
 wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/vendor_lineage/0004-Optimize-Settings-for-speed.patch
 patch -p1 <0001-soong-Add-disable-postrender-cleanup-conditional.patch
 patch -p1 <0002-overlay-Add-google-OTA-to-global-disabledComponent.patch
-patch -p1 <0003-Allow-gms-to-access-persistent-data-partition.patch
 patch -p1 <0004-Optimize-Settings-for-speed.patch
 cd ../..
 
