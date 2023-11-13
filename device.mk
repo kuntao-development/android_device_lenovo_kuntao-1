@@ -27,6 +27,16 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
+# Rationale: speed has a lot of dex code expansion, it uses more ram and space
+# compared to quicken. Using quicken for shared APKs on Go devices may save RAM.
+# Note that this is a trade-off: here we trade clean pages for dirty pages,
+# extra cpu and battery. That's because the quicken files will be jit-ed in all
+# the processes that load of shared apk and the code cache is not shared.
+# Some notable apps that will be affected by this are gms and chrome.
+# b/65591595.
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.shared=quicken
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
