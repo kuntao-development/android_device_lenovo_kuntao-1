@@ -37,6 +37,10 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.shared=quicken
 
+# set threshold to filter unused apps
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.downgrade_after_inactive_days=10
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
