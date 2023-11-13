@@ -144,12 +144,6 @@ wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/packages
 patch -p1 <0001-DeskClock-Ensure-ringtone-is-playing-when-starting-the-crescendo-effect.patch
 cd ../../..
 
-echo 'Adding patch to Power hal [12/12]'
-cd vendor/qcom/opensource/power
-wget https://raw.githubusercontent.com/Astridxx/Patch-kuntao/lineage-20/vendor_qcom_opensource_power/0001-Cancel-the-previous-boost-after-calling-a-new-one.patch
-patch -p1 <0001-Cancel-the-previous-boost-after-calling-a-new-one.patch
-cd ../../../..
-
 echo 'Patching process completed'
 
 echo 'delete vendorsetup.sh from device tree once this is done'
