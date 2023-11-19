@@ -76,6 +76,8 @@ echo 'Cloning vendor bliss [19/20]'
 # Bliss vendor
 rm -rf vendor/bliss && git clone --depth=1 https://github.com/Astridxx/platform_vendor_bliss -b arcadia-next vendor/bliss
 
+rm -rf packages/apps/TvSettings
+
 echo 'Adding patch for DeskClock [20/20]'
 cd packages/apps/DeskClock
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-19.1/patches_platform_personal/packages_apps_DeskClock/0001-DeskClock-Remove-night-mode.patch
