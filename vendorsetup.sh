@@ -84,7 +84,12 @@ wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-19.1/patches_platform_personal/packages_apps_DeskClock/0002-DeskClock-Adapt-digital-clocks-to-S-style.patch
 wget https://raw.githubusercontent.com/AndyCGYan/lineage_patches_unified/lineage-19.1/patches_platform_personal/packages_apps_DeskClock/0003-DeskClock-Wallpaper-based-text-coloring-for-digital-.patch
 git apply *.patch
-
 cd ../../..
+
+echo 'Adding patch to frameworks native'
+cd frameworks/native
+wget https://github.com/LineageOS/android_frameworks_native/commit/494a3edbaff22c396cfc8f86d54d24081d3392f7.patch
+git apply *.patch
+cd ../..
 
 echo 'Completed, proceeding to lunch'
