@@ -27,7 +27,7 @@ public class ButtonSettingsActivity extends CollapsingToolbarBaseActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame,
                 new ButtonSettingsFragment(), TAG_DEVİCEGESTURES).commit();
 
     }

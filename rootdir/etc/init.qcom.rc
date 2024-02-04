@@ -175,17 +175,9 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    # write caching
-    # Tell the kernel to use up to 99% of the RAM as cache for writes
-    # and instruct kernel to use up to 50% of RAM before slowing down
-    # the process that's writing.
-    write /proc/sys/vm/dirty_ratio 99
-    write /proc/sys/vm/dirty_background_ratio 50
-
-    # Tell that 10 minutes write delay is ok to even start writing
-    # stuff on the disk (ten minutes = 60000; 1 hour 360000).
-    write /proc/sys/vm/dirty_expire_centisecs 60000
-    write /proc/sys/vm/dirty_writeback_centisecs 60000
+    # Tweak background writeout
+    write /proc/sys/vm/dirty_expire_centisecs 200
+    write /proc/sys/vm/dirty_background_ratio 5
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -203,7 +195,7 @@ on property:hw.fm.init=0
 on property:hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
@@ -214,16 +206,16 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     group system radio
     task_profiles ServiceCapacityLow
 
-service loc_launcher /vendor/bin/loc_launcher
+service vendor.loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
     task_profiles ServiceCapacityLow
 
 on property:persist.sys.xtra-daemon.enabled=*
-    restart loc_launcher
+    restart vendor.loc_launcher
 
-service qcom-sh /vendor/bin/init.qcom.sh
+service vendor.qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio
@@ -232,7 +224,7 @@ service qcom-sh /vendor/bin/init.qcom.sh
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
-service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
@@ -240,7 +232,7 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
+    start vendor.qcom-post-boot
     restart audioserver
     restart vendor.audio-hal
     restart vendor.media.omx
@@ -267,14 +259,15 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
+    task_profiles ServiceCapacityLow
 
 on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
 on charger
     setprop sys.usb.configfs 0
-    start qcom-post-boot
-    start smart_charger
+    start vendor.qcom-post-boot
+    start vendor.smart_charger
     start vendor.power_off_alarm
     chown system system /sys/class/leds/rgb/brightness
     write /sys/class/leds/rgb/brightness 255

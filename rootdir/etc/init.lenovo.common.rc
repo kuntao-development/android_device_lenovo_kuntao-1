@@ -1,15 +1,12 @@
-service smart_charger /vendor/bin/smart_charger
+service vendor.smart_charger /vendor/bin/smart_charger
     class main
     user root
 
-service vfmservice /vendor/bin/vfmService
+service vendor.vfmservice /vendor/bin/vfmService
     class main
     user system
     group system input uhid
     task_profiles ServiceCapacityLow
-
-on property:vendor.sys.listeners.registered=true
-    start vfmservice
 
 on boot
     # Double tap
@@ -42,7 +39,7 @@ on post-fs
 
 on post-fs-data
     # Fingerprint
-    mkdir /data/validity 0775 system system encryption=Require
+    mkdir /data/validity 0775 system system encryption=None
 
     # Sensors
     mkdir /data/STSensorHAL 0775 system system encryption=Require

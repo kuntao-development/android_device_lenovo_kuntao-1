@@ -21,5 +21,4 @@ android_app {
         "androidx.core_core",
         "androidx.preference_preference",
     ],
-
 }
