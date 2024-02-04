@@ -17,31 +17,15 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-banana
 
 # Optimize
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings
-
-ifeq ($(PRODUCT_OVERRIDE_GMS_FINGERPRINT),)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += 
-else
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
-endif
-
-# Spoof fingerprint for Google Play Services and SafetyNet
-ifeq ($(PRODUCT_OVERRIDE_GMS_FINGERPRINT),)
-PRODUCT_SYSTEM_PROPERTIES += ro.build.gms_fingerprint=google/angler/angler:7.0/NPD90G/3051502:user/release-keys
-else
-PRODUCT_SYSTEM_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
-endif
+    Launcher3QuickStep
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -224,10 +208,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/configs/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
-# Google Photos
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
-
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
@@ -399,17 +379,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
-# TextClassifier
-PRODUCT_PACKAGES += \
-	libtextclassifier_annotator_en_model \
-	libtextclassifier_annotator_universal_model \
-	libtextclassifier_actions_suggestions_universal_model \
-	libtextclassifier_lang_id_model
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

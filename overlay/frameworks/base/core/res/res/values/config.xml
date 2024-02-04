@@ -420,7 +420,7 @@
         <item>"/system/framework/services.jar"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
@@ -459,7 +459,7 @@
 
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
          etc. dialogs. -->
-    <string name="config_appsNotReportingCrashes">com.google.android.tts,com.android.statementservice,com.mgoogle.android.gms</string>
+    <string name="config_appsNotReportingCrashes">com.google.android.tts,com.android.statementservice,com.mgoogle.android.gms,com.google.android.as,com.android.systemui</string>
 
     <!-- The max scale for the wallpaper when it's zoomed in -->
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
